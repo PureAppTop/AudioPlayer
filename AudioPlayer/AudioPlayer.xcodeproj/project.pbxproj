@@ -132,7 +132,7 @@
 		462FC8021C9D7C33005A674B /* AudioPlayerMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerMode.swift; sourceTree = "<group>"; };
 		4631A0301CA7D6F300202AA3 /* MPNowPlayingInfoCenter+AudioItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MPNowPlayingInfoCenter+AudioItem.swift"; sourceTree = "<group>"; };
 		466549701CE8A0C6000EE23C /* URL+Offline_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Offline_Tests.swift"; sourceTree = "<group>"; };
-		466930791BAD30AB00C1E97C /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = AudioPlayer/Reachability.swift; sourceTree = SOURCE_ROOT; };
+		466930791BAD30AB00C1E97C /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = AudioPlayer/Utils/Reachability.swift; sourceTree = SOURCE_ROOT; };
 		467D61161CB110BD00D50807 /* AudioPlayer+PlayerEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioPlayer+PlayerEvent.swift"; sourceTree = "<group>"; };
 		467D611A1CB1113500D50807 /* AudioPlayer+NetworkEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioPlayer+NetworkEvent.swift"; sourceTree = "<group>"; };
 		467D611E1CB1119600D50807 /* AudioPlayer+QualityAdjustmentEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioPlayer+QualityAdjustmentEvent.swift"; sourceTree = "<group>"; };
@@ -266,7 +266,7 @@
 			path = supporting_files;
 			sourceTree = "<group>";
 		};
-		46D3A2DB1C8F442200635FE4 /* event */ = {
+		46D3A2DB1C8F442200635FE4 /* Event */ = {
 			isa = PBXGroup;
 			children = (
 				46D3A2E01C8F480A00635FE4 /* EventProducer.swift */,
@@ -277,7 +277,7 @@
 				46DDB09D1C959D3C007B60C6 /* AudioItemEventProducer.swift */,
 				46D3A3121C93405400635FE4 /* QualityAdjustmentEventProducer.swift */,
 			);
-			path = event;
+			path = Event;
 			sourceTree = "<group>";
 		};
 		46D3A2FB1C90920B00635FE4 /* fakes */ = {
@@ -289,37 +289,37 @@
 			path = fakes;
 			sourceTree = "<group>";
 		};
-		46D3A2FE1C90A5C600635FE4 /* item */ = {
+		46D3A2FE1C90A5C600635FE4 /* Item */ = {
 			isa = PBXGroup;
 			children = (
 				46D3A3221C943ECC00635FE4 /* AudioItem.swift */,
 				46D3A31A1C9340D000635FE4 /* AudioItemQueue.swift */,
 			);
-			path = item;
+			path = Item;
 			sourceTree = "<group>";
 		};
-		46D3A2FF1C90A5D600635FE4 /* player */ = {
+		46D3A2FF1C90A5D600635FE4 /* Player */ = {
 			isa = PBXGroup;
 			children = (
-				46DE85081CAB064300F00287 /* extensions */,
 				462679671AED5DDC003771C9 /* AudioPlayer.swift */,
 				46D3A3091C93389500635FE4 /* AudioPlayerState.swift */,
 				46D3A3001C90A93400635FE4 /* AudioPlayerDelegate.swift */,
 				462FC8021C9D7C33005A674B /* AudioPlayerMode.swift */,
 				BB5E356C1EC3738F001BF508 /* AudioPlayerBufferingStrategy.swift */,
 			);
-			path = player;
+			path = Player;
 			sourceTree = "<group>";
 		};
-		46D3A30B1C933A5F00635FE4 /* utils */ = {
+		46D3A30B1C933A5F00635FE4 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				466930791BAD30AB00C1E97C /* Reachability.swift */,
 				46AADEE61CA1BA5A00CF7A3D /* BackgroundHandler.swift */,
 				467D61261CB1145000D50807 /* URL+Offline.swift */,
 				46D3A30C1C933A7F00635FE4 /* CMTime+TimeIntervalValue.swift */,
 				4631A0301CA7D6F300202AA3 /* MPNowPlayingInfoCenter+AudioItem.swift */,
 			);
-			path = utils;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		46DAE4B41C4026E200572EB2 /* AudioPlayer OSX */ = {
@@ -330,7 +330,7 @@
 			path = "AudioPlayer OSX";
 			sourceTree = "<group>";
 		};
-		46DE85081CAB064300F00287 /* extensions */ = {
+		46DE85081CAB064300F00287 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				46DE85091CAB067400F00287 /* AudioPlayer+Control.swift */,
@@ -343,17 +343,17 @@
 				467D61221CB111E800D50807 /* AudioPlayer+AudioItemEvent.swift */,
 				460FA1E41CC1814500156DFC /* AudioPlayer+RetryEvent.swift */,
 			);
-			path = extensions;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		46F96FC71C3682B200E56082 /* AudioPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				46D3A30B1C933A5F00635FE4 /* utils */,
-				46D3A2FF1C90A5D600635FE4 /* player */,
-				46D3A2FE1C90A5C600635FE4 /* item */,
-				46D3A2DB1C8F442200635FE4 /* event */,
-				466930791BAD30AB00C1E97C /* Reachability.swift */,
+				46D3A2FF1C90A5D600635FE4 /* Player */,
+				46D3A2FE1C90A5C600635FE4 /* Item */,
+				46D3A2DB1C8F442200635FE4 /* Event */,
+				46DE85081CAB064300F00287 /* Extension */,
+				46D3A30B1C933A5F00635FE4 /* Utils */,
 			);
 			path = AudioPlayer;
 			sourceTree = "<group>";
@@ -483,8 +483,9 @@
 					};
 					462679471AED567D003771C9 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 937TDBQ4TP;
+						DevelopmentTeam = U9YJ289VCA;
 						LastSwiftMigration = 0930;
+						ProvisioningStyle = Manual;
 					};
 					46DAE4B21C4026E100572EB2 = {
 						CreatedOnToolsVersion = 7.2;
@@ -826,6 +827,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -834,7 +836,10 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = be.delannoyk.AudioPlayer;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = top.pureapp.AudioPlayer;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = top.pureapp.AudioPlayer;
 				PRODUCT_MODULE_NAME = AudioPlayer;
 				PRODUCT_NAME = AudioPlayer;
 				SKIP_INSTALL = YES;
@@ -849,6 +854,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -857,7 +863,10 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
 				PRODUCT_BUNDLE_IDENTIFIER = be.delannoyk.AudioPlayer;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = top.pureapp.AudioPlayer;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = top.pureapp.AudioPlayer;
 				PRODUCT_MODULE_NAME = AudioPlayer;
 				PRODUCT_NAME = AudioPlayer;
 				SKIP_INSTALL = YES;
@@ -869,15 +878,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 937TDBQ4TP;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = U9YJ289VCA;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = AudioPlayerTests/supporting_files/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "be.delannoyk.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "top.pureapp.--PRODUCT-NAME-rfc1034identifier-";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = top.pureapp.AudioPlayerTests;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = top.pureapp.AudioPlayerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Wildcard;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -887,11 +904,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 937TDBQ4TP;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = U9YJ289VCA;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				INFOPLIST_FILE = AudioPlayerTests/supporting_files/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "be.delannoyk.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "top.pureapp.--PRODUCT-NAME-rfc1034identifier-";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = top.pureapp.AudioPlayerTests;
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=macosx*]" = top.pureapp.AudioPlayerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Wildcard;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -911,8 +936,9 @@
 				INFOPLIST_FILE = "$(SRCROOT)/AudioPlayer OSX/Info-OSX.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = be.delannoyk.AudioPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = top.pureapp.AudioPlayer;
 				PRODUCT_NAME = AudioPlayer;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -934,8 +960,9 @@
 				INFOPLIST_FILE = "$(SRCROOT)/AudioPlayer OSX/Info-OSX.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = be.delannoyk.AudioPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = top.pureapp.AudioPlayer;
 				PRODUCT_NAME = AudioPlayer;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -956,7 +983,8 @@
 				INFOPLIST_FILE = "$(SRCROOT)/AudioPlayer tvOS/Info-tvOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = be.delannoyk.AudioPlayer;
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = top.pureapp.AudioPlayer;
 				PRODUCT_NAME = AudioPlayer;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -978,7 +1006,8 @@
 				INFOPLIST_FILE = "$(SRCROOT)/AudioPlayer tvOS/Info-tvOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = be.delannoyk.AudioPlayer;
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = top.pureapp.AudioPlayer;
 				PRODUCT_NAME = AudioPlayer;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
